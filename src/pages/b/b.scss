@@ -1,0 +1,82 @@
+page-b {
+    .fixed-content{
+        background-color: #EEEEEE;
+    }
+    .header-md::after{
+        height: 0px !important;
+    }
+    .toolbar-md{
+        padding: 0px;
+    }
+    .head{
+        .bgimg{
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .headimg{
+            position: absolute;
+            max-width: 203px;
+            max-height:203px; 
+            height: 100px;
+            width:100px;
+            overflow:hidden;
+            border-radius:50%;
+            left:37%;
+            bottom: 30%;
+        }
+        .p1{
+            position:absolute;
+            left: 42%;
+            bottom: 10%;
+        }
+    }
+    .tool{
+        background-color: #EEEEEE;
+        height: 50px;
+        .p2{
+            float: left;
+            width: 62.5px;
+            margin: 0 0 0 15px;
+        }
+        .p3{
+            float: right;
+            width: 100px;
+            margin: 0 10px 0 0;
+            color: #979797;
+        }
+    }
+    ul{
+        display: flex;
+        -webkit-padding-start: 0 !important;
+        flex-direction: row;
+    }
+    span{
+        display: flex;
+    }
+    .top{
+        height: 85px;
+        ion-icon{
+            font-size: 3.5rem;
+        }
+        ul{
+            justify-content:space-around;
+            span{
+            justify-content:space-around;        
+            }
+        }
+    }
+    .bot{
+        height: 85px;
+        ion-icon{
+            font-size: 3.5rem;
+        }
+        ul{
+            justify-content:space-around;
+            span{
+            justify-content:space-around;        
+            }
+        }
+    }
+}

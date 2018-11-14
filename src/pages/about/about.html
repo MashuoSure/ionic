@@ -1,11 +1,83 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <ion-searchbar color="danger" placeholder="双12特惠好物超低价"></ion-searchbar>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content  (swipe)="swipeEvent($event)">
+  <div class="headpic">
+    <img src="../../assets/imgs/img12.png">
+  </div>
+  <div [ngSwitch]="segmentModel">
+    <ion-toolbar no-border-top color="orange">
+        <ion-segment [(ngModel)]="segmentModel">
+          <ion-segment-button value="segmentOne">
+            客厅
+          </ion-segment-button>
+          <ion-segment-button value="segmentTwo">
+            卧室
+          </ion-segment-button>
+          <ion-segment-button value="segmentThree">
+            餐厅
+          </ion-segment-button>
+          <ion-segment-button value="segmentFour">
+            书房
+          </ion-segment-button>
+          <ion-segment-button value="segmentFive">
+            门厅
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+      <ion-list *ngSwitchCase="'segmentOne'">
+        <ion-item>
+          <div class="title">
+              <h5>————  沙发  ————</h5>
+          </div>
+          <ul class="goods">
+            <li>
+              <img src="../../assets/imgs/img13.png" alt="">
+            </li>
+            <li>
+              <img src="../../assets/imgs/img14.png" alt="">
+            </li>
+            <li>
+              <img src="../../assets/imgs/img15.png" alt="">
+              <p>罗得蒙简约植绒布艺沙发</p>
+              <span><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img16.png" alt="">
+            </li>
+          </ul>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'segmentTwo'">
+        <ion-item>
+          <div class="title">
+              <h5>————  沙发  ————</h5>
+          </div>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'segmentThree'">
+        <ion-item>
+          <div class="title">
+              <h5>————  沙发  ————</h5>
+          </div>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'segmentFour'">
+        <ion-item>
+          <div class="title">
+              <h5>————  沙发  ————</h5>
+          </div>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'segmentFive'">
+        <ion-item>
+          <div class="title">
+              <h5>————  沙发  ————</h5>
+          </div>
+        </ion-item>
+      </ion-list>
+  </div>
 </ion-content>

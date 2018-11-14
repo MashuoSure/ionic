@@ -1,3 +1,89 @@
 page-home {
-
+    img{
+        overflow: hidden;
+    }
+    .navList{
+        padding-left: 0!important;
+        margin: 0;
+        height: 44px;
+        line-height: 44px;
+        .first{
+            border-bottom:2px solid #ffdb2c;
+        }
+        li{
+            height: 44px;
+            text-align: center;
+            float: left;
+            width: 25%;
+        }
+    }
+    .sli{
+        height:200px;
+    }
+    .sectitle{
+        text-align: center;
+    }
+    .goods{
+        padding: 0;
+        img{
+            width: 100%;
+            height: 220px;
+        }
+        li{
+            position: relative;
+            width: 45%;
+            float: left;
+            margin: 5px 0 5px 3%;
+            span{
+                img{
+                display: block;
+                }
+                width: 26px;
+                height: 26px;
+                text-align: center;
+                line-height: 26px;
+                border-radius: 50%;
+                color: red;
+                position: absolute;
+                background: #fff;
+                right: 15px;
+                bottom: 25px;
+            }
+            p{
+                position: absolute;
+                width: 100%;
+                bottom:4px;
+                margin: 0;
+                color: #fff;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color:rgba(0,0,0,0.5);
+            }
+        }
+    }
+    .rooms{
+        padding: 0;
+        img{
+            width: 100%;
+            height: 200px;
+        }
+        li{
+            position: relative;
+            width: 30%;
+            float: left;
+            margin: 5px 0 5px 3%;
+        }
+        p{
+            position: absolute;
+            width: 100%;
+            bottom:4px;
+            margin: 0;
+            color: #fff;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color:rgba(0,0,0,0.5);
+        }
+    }
 }

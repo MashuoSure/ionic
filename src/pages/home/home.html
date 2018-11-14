@@ -1,17 +1,234 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-header text-center no-border>
+    <ion-navbar color = "orange" >
+      <ion-buttons begin>
+        <button ion-button icon-only menuToggle>
+           <ion-icon name=""></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>
+          桔家
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="segmentModel">
+        <ion-segment-button value="segmentOne">
+          推荐
+        </ion-segment-button>
+        <ion-segment-button value="segmentTwo">
+          家居
+        </ion-segment-button>
+        <ion-segment-button value="segmentThree">
+          餐厨
+        </ion-segment-button>
+        <ion-segment-button value="segmentFour">
+          床上用品
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content (swipe)="swipeEvent($event)">
+    <div [ngSwitch]="segmentModel">
+      <ion-list *ngSwitchCase="'segmentOne'">
+        <ion-item>
+          <ion-slides  pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="../../assets/imgs/slide1.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide2.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide1.png" alt="">
+            </ion-slide>
+          </ion-slides>
+          <div class="sectitle">
+            <h2>热|门|推|荐</h2>
+            <p>R E C O M M E N D A T I O N</p>
+          </div>
+          <ul class="goods">
+            <li>
+              <img src="../../assets/imgs/img1.png" alt="">
+              <p>-北欧原木色置物架-</p>
+              <span><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img2.png" alt="">
+              <p>-简约黑檀木茶几-</p>
+              <span><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img3.png" alt="">
+              <p>-北欧白橡木书架-</p>
+              <span><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img4.png" alt="">
+              <p>-北欧风餐边柜-</p>
+              <span><ion-icon name="md-star-half"></ion-icon></span>
+            </li>
+          </ul>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'segmentTwo'">
+        <ion-item>
+          <ion-slides  pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="../../assets/imgs/slide2.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide1.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide2.png" alt="">
+            </ion-slide>
+          </ion-slides>    
+          <div class="sectitle">
+              <h2>桔|子|家|居</h2>
+              <p>O r a n g e h o u s e h o l d</p>
+          </div>
+          <ul class="rooms">
+            <li>
+              <img src='../../assets/imgs/img5.png' alt="">
+              <p>客厅</p>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img6.png" alt="">
+              <p>书房</p>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img7.png" alt="">
+              <p>门厅</p>
+            </li>
+          </ul>
+          <ul class="goods">
+              <li>
+                <img src="../../assets/imgs/img8.png" alt="">
+                <p>-欧式全实木花几- RMB 600</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img9.png" alt="">
+                <p>-现代简约早餐桌- RMB 450</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img10.png" alt="">
+                <p></p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img11.png" alt="">
+                <p></p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+            </ul>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'segmentThree'">
+        <ion-item>
+            <ion-slides  pager="true" autoplay="1000" loop="true" class="sli">
+                <ion-slide>
+                  <img src="../../assets/imgs/slide1.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="../../assets/imgs/slide2.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="../../assets/imgs/slide1.png" alt="">
+                </ion-slide>
+              </ion-slides>
+              <div class="sectitle">
+                <h2>热|门|推|荐</h2>
+                <p>R E C O M M E N D A T I O N</p>
+              </div>
+              <ul class="goods">
+                <li>
+                  <img src="../../assets/imgs/img1.png" alt="">
+                  <p>-北欧原木色置物架-</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../../assets/imgs/img2.png" alt="">
+                  <p>-简约黑檀木茶几-</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../../assets/imgs/img3.png" alt="">
+                  <p>-北欧白橡木书架-</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                  <img src="../../assets/imgs/img4.png" alt="">
+                  <p>-北欧风餐边柜-</p>
+                  <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+              </ul>
+        </ion-item>
+      </ion-list>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-</ion-content>
+      <ion-list *ngSwitchCase="'segmentFour'">
+          <ion-item>
+            <ion-slides  pager="true" autoplay="1000" loop="true" class="sli">
+            <ion-slide>
+              <img src="../../assets/imgs/slide2.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide1.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="../../assets/imgs/slide2.png" alt="">
+            </ion-slide>
+          </ion-slides>    
+          <div class="sectitle">
+              <h2>桔|子|家|居</h2>
+              <p>O r a n g e h o u s e h o l d</p>
+          </div>
+          <ul class="rooms">
+            <li>
+              <img src='../../assets/imgs/img5.png' alt="">
+              <p>客厅</p>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img6.png" alt="">
+              <p>书房</p>
+            </li>
+            <li>
+              <img src="../../assets/imgs/img7.png" alt="">
+              <p>门厅</p>
+            </li>
+          </ul>
+          <ul class="goods">
+              <li>
+                <img src="../../assets/imgs/img8.png" alt="">
+                <p>-欧式全实木花几- RMB 600</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img9.png" alt="">
+                <p>-现代简约早餐桌- RMB 450</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img10.png" alt="">
+                <p></p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="../../assets/imgs/img11.png" alt="">
+                <p></p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+            </ul>
+          </ion-item>
+        </ion-list>
+    </div>
+  </ion-content>

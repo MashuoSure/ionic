@@ -18,7 +18,7 @@ export class TabsPage {
   tab2Root = AboutPage;
   tab3Root = ContactPage;
   tab4Root = MinePage;
-  // tab5Root = BPage;
+  tab5Root = BPage;
 
   constructor(public navCtrl: NavController,public navParams:NavParams,  public modalCtrl:ModalController) {
 
